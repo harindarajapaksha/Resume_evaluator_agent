@@ -16,7 +16,10 @@ except Exception:
 
 
 # Load environment variables
-load_dotenv(os.getenv("DOTENV_PATH", ".env"))
+dotenv_path = os.getenv("DOTENV_PATH")
+if dotenv_path:
+    load_dotenv(dotenv_path)
+# load_dotenv(os.getenv("DOTENV_PATH", ".env"))
 
 
 def _setup_logger() -> logging.Logger:

@@ -1,12 +1,3 @@
-"""
-Prompt templates and output schemas for resume evaluation and PII redaction.
-
-Notes for production:
-- Avoid loading .env files at import time in production. Enable via LOAD_DOTENV=true if needed.
-- The LLM is instructed to return JSON matching the Pydantic schemas to reduce parsing errors.
-- Prompts avoid unsafe instructions (e.g., “forget previous instructions”).
-"""
-
 from __future__ import annotations
 
 import os
